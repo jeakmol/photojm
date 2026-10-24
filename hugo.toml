@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://jeakmol.github.io/photojm/'
 locale = 'fr-fr'
 title = 'photojm'
 theme = 'gallery'
