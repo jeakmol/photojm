@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photojm</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on photojm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nature</title>
+      <link>http://localhost:1313/nature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/nature/</guid>
+        <media:content url="http://localhost:1313/nature/20261011%200914%20ironman%20molieres%20_DSF6093_hu_4e90d64b707d41ab.JPG" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/nature/20261011%200914%20ironman%20molieres%20_DSF6093_hu_4e90d64b707d41ab.JPG&quot; /&gt;
+          &lt;p&gt;Mes photos de nature.&lt;/p&gt;
+        </description></item>
+  </channel>
+</rss>
