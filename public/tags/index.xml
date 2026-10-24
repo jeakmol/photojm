@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on photojm</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:1313/photojm/tags/</link>
     <description>Recent content in Tags on photojm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-fr</language><atom:link href="http://localhost:1313/photojm/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>photojm</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/photojm/</link>
     <description>Recent content on photojm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-fr</language><atom:link href="http://localhost:1313/photojm/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nature</title>
-      <link>http://localhost:1313/nature/</link>
+      <title>Ironman</title>
+      <link>http://localhost:1313/photojm/ironwoman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/nature/</guid>
-        <media:content url="http://localhost:1313/nature/20261011%200914%20ironman%20molieres%20_DSF6093_hu_4e90d64b707d41ab.JPG" type="image/jpeg"/>
+      <guid>http://localhost:1313/photojm/ironwoman/</guid>
+        <media:content url="http://localhost:1313/photojm/ironwoman/20261011%200921%20ironman%20molieres%20_DSF6111_hu_8fb2f0acadbc2f08.JPG" type="image/jpeg"/>
         <description>
-          &lt;img src=&quot;http://localhost:1313/nature/20261011%200914%20ironman%20molieres%20_DSF6093_hu_4e90d64b707d41ab.JPG&quot; /&gt;
-          &lt;p&gt;Mes photos de nature.&lt;/p&gt;
+          &lt;img src=&quot;http://localhost:1313/photojm/ironwoman/20261011%200921%20ironman%20molieres%20_DSF6111_hu_8fb2f0acadbc2f08.JPG&quot; /&gt;
+          &lt;p&gt;Ironwoman et Ironman&lt;/p&gt;
         </description></item>
   </channel>
 </rss>
