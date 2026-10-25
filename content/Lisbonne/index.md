@@ -1,4 +1,4 @@
 ---
 title: "Lisbonne 2026"
-description: "vraiment quelques photos"
+description: "seulement quelques photos"
 ---

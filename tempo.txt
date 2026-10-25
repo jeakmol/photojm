@@ -1,3 +1,9 @@
+cd photojm
+hugo server
+
+
+site local :
+http://localhost:1313/photojm/
 
 
 git add .
@@ -7,6 +13,8 @@ git remote add origin https://github.com/jeakmol/photojm.git
 git push -u origin main
 
 
-
 https://jeakmol.github.io/photojm/
 
+
+site :
+https://github.com/jeakmol/
