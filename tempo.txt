@@ -1,0 +1,12 @@
+
+
+git add .
+git commit -m "commit new"
+git branch -M main
+git remote add origin https://github.com/jeakmol/photojm.git
+git push -u origin main
+
+
+
+https://jeakmol.github.io/photojm/
+
