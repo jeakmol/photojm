@@ -1,0 +1,19 @@
+<!-- layouts/shortcodes/slider.html -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    {{ range .Page.Resources.ByType "image" }}
+      {{ $image := . }}
+      {{/* On redimensionne l'image pour éviter de charger des fichiers trop lourds */}}
+      {{ $resized := $image.Resize "800x" }}
+      <div class="swiper-slide">
+        <img src="{{ $resized.RelPermalink }}" alt="{{ $image.Title }}" />
+      </div>
+    {{ end }}
+  </div>
+  <!-- Pagination et navigation -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- Ajout de la scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>

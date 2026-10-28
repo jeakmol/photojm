@@ -1,0 +1,4 @@
+{{ with resources.Get "css/sliderlm.css" }}
+  {{ $css := . | minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ end }}

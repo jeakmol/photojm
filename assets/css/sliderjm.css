@@ -1,0 +1,14 @@
+.sliderlm-container {
+  display: flex;
+  flex-wrap: nowrap;          /* Interdire le retour à la ligne, tout sur une seule ligne */
+  overflow-x: auto;           /* Activer le défilement horizontal */
+  gap: 0;                     /* Les images sont contiguës, sans espace */
+  scroll-snap-type: x mandatory; /* Optionnel : effet d'alignement au défilement */
+  -webkit-overflow-scrolling: touch; /* Défilement fluide sur mobile */
+}
+
+.sliderlm-container img {
+  flex: 0 0 auto;             /* Ne pas étirer ni rétrécir, conserver les dimensions définies en ligne */
+  scroll-snap-align: start;   /* Optionnel : alignement au défilement */
+  object-fit: cover;          /* Garantir le remplissage sans déformation (si les dimensions sont fixes) */
+}

@@ -1,30 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>photojm</title>
-    <link>http://localhost:1313/photojm/</link>
-    <description>Recent content on photojm</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language><atom:link href="http://localhost:1313/photojm/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ironwoman</title>
-      <link>http://localhost:1313/photojm/ironwoman/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/photojm/ironwoman/</guid>
-        <media:content url="http://localhost:1313/photojm/ironwoman/20261011%200921%20ironman%20molieres%20_DSF6111_hu_5b5fcc2f733b726.JPG" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/photojm/ironwoman/20261011%200921%20ironman%20molieres%20_DSF6111_hu_5b5fcc2f733b726.JPG&quot; /&gt;
-          &lt;p&gt;Ironman de Versailles 2026 09 11&lt;/p&gt;
-        </description></item>
-    <item>
-      <title>Lisbonne 2026</title>
-      <link>http://localhost:1313/photojm/lisbonne/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/photojm/lisbonne/</guid>
-        <media:content url="http://localhost:1313/photojm/lisbonne/20260527%201607%20alfama%20lisbonne%20_DSF4737_hu_a585a17491a7a7c2.JPG" type="image/jpeg"/>
-        <description>
-          &lt;img src=&quot;http://localhost:1313/photojm/lisbonne/20260527%201607%20alfama%20lisbonne%20_DSF4737_hu_a585a17491a7a7c2.JPG&quot; /&gt;
-          &lt;p&gt;seulement quelques photos&lt;/p&gt;
-        </description></item>
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>photojm</title>
+		<link>http://localhost:1313/photojm/</link>
+		<description>Recent content on photojm</description>
+		<generator>Hugo</generator>
+		<language>fr-fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/photojm/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Post 3</title>
+				<link>http://localhost:1313/photojm/posts/post-3/</link>
+				<pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+				<guid>http://localhost:1313/photojm/posts/post-3/</guid>
+				<description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Post 2</title>
+				<link>http://localhost:1313/photojm/posts/post-2/</link>
+				<pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+				<guid>http://localhost:1313/photojm/posts/post-2/</guid>
+				<description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;&#xA;&lt;p&gt;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Post 1</title>
+				<link>http://localhost:1313/photojm/posts/post-1/</link>
+				<pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+				<guid>http://localhost:1313/photojm/posts/post-1/</guid>
+				<description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ironwoman</title>
+				<link>http://localhost:1313/photojm/ironwoman/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/photojm/ironwoman/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lisbonne 2026</title>
+				<link>http://localhost:1313/photojm/lisbonne/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/photojm/lisbonne/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Riga 2019</title>
+				<link>http://localhost:1313/photojm/riga/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/photojm/riga/</guid>
+				<description>&lt;div class=&#34;swiper mySwiper&#34;&gt;&#xD;&#xA;  &lt;div class=&#34;swiper-wrapper&#34;&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201630%20riga%20JE3M6401_hu_a53dc6ed83ea7823.JPG&#34; alt=&#34;20190711 1630 riga JE3M6401.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201641%20riga%20DSCF5143_hu_741db88758bb32e8.JPG&#34; alt=&#34;20190711 1641 riga DSCF5143.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201751%20riga%20JE3M6439_hu_3c67981c06d10ee1.JPG&#34; alt=&#34;20190711 1751 riga JE3M6439.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201820%20riga%20JE3M6462_hu_ad6a9aadd82c5413.JPG&#34; alt=&#34;20190711 1820 riga JE3M6462.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201909%20riga%20JE3M6469_hu_19e91a655318426b.JPG&#34; alt=&#34;20190711 1909 riga JE3M6469.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201931%20riga%20JE3M6480_hu_b1f072ccb3df594d.JPG&#34; alt=&#34;20190711 1931 riga JE3M6480.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190711%201938%20riga%20DSCF5166_hu_1572fcfbaccc1067.JPG&#34; alt=&#34;20190711 1938 riga DSCF5166.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%200831%20riga%20DSCF5184_hu_7207ce8f412bd474.JPG&#34; alt=&#34;20190712 0831 riga DSCF5184.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%200857%20riga%20DSCF5218_hu_d435cce4894b16c3.JPG&#34; alt=&#34;20190712 0857 riga DSCF5218.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%200916%20riga%20DSCF5230_hu_9f37c5735f1ceca9.JPG&#34; alt=&#34;20190712 0916 riga DSCF5230.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201020%20riga%20DSCF5247_hu_d642ec5718f3cb2c.JPG&#34; alt=&#34;20190712 1020 riga DSCF5247.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201305%20riga%20DSCF5275_hu_7a98b1b08c2a2692.JPG&#34; alt=&#34;20190712 1305 riga DSCF5275.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201321%20riga%20DSCF5284_hu_dbf391c58b995af4.JPG&#34; alt=&#34;20190712 1321 riga DSCF5284.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201328%20riga%20JE3M6567_hu_65457376af1ca0eb.JPG&#34; alt=&#34;20190712 1328 riga JE3M6567.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201400%20riga%20JE3M6595_hu_eb096227b2c54906.JPG&#34; alt=&#34;20190712 1400 riga JE3M6595.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &#xD;&#xA;      &lt;div class=&#34;swiper-slide&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/photojm/riga/20190712%201551%20riga%20DSCF5332_hu_4a1f96c1387c9e55.JPG&#34; alt=&#34;20190712 1551 riga DSCF5332.JPG&#34; /&gt;&#xD;&#xA;      &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;  &lt;/div&gt;&#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;swiper-pagination&#34;&gt;&lt;/div&gt;&#xD;&#xA;  &lt;div class=&#34;swiper-button-next&#34;&gt;&lt;/div&gt;&#xD;&#xA;  &lt;div class=&#34;swiper-button-prev&#34;&gt;&lt;/div&gt;&#xD;&#xA;  &#xD;&#xA;  &lt;div class=&#34;swiper-scrollbar&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
+			</item>
+	</channel>
 </rss>

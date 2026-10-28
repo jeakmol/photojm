@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="sliderlm-container">
+  {{ range .Resources.ByType "image" }}
+    {{ $img := . }}
+    {{ $height := "600" }} <!-- Hauteur de référence par défaut, à ajuster selon vos besoins -->
+    {{ $style := "" }}
+    
+    {{/* Déterminer l'orientation : si la hauteur est supérieure à la largeur, c'est un portrait, hauteur fixe ; sinon c'est un paysage, hauteur également fixe */}}
+    {{ if gt $img.Height $img.Width }}
+      {{/* Image portrait : hauteur fixe, largeur automatique */}}
+      {{ $style = printf "height: %spx; width: auto; display: block;" $height }}
+    {{ else }}
+      {{/* Image paysage : hauteur également fixe, largeur automatique */}}
+      {{ $style = printf "height: %spx; width: auto; display: block;" $height }}
+    {{ end }}
+    
+    <img src="{{ $img.RelPermalink }}" 
+         width="{{ $img.Width }}" 
+         height="{{ $img.Height }}"
+         style="{{ $style | safeCSS }}"
+         alt="{{ $img.Title }}">
+  {{ end }}
+</div>
+{{ end }}

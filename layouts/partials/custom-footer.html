@@ -1,0 +1,22 @@
+
+<script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // Configuration de la scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true, // Permet de faire glisser la barre
+      },
+    });
+  });
+</script>
