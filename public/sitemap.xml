@@ -2,39 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/photojm/tags/blue/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/tags/green/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/posts/post-3/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/tags/red/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/tags/</loc>
-    <lastmod>2023-03-15T11:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/posts/post-2/</loc>
-    <lastmod>2023-02-15T10:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/posts/post-1/</loc>
-    <lastmod>2023-01-15T09:00:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/photojm/posts/</loc>
-    <lastmod>2023-01-01T08:30:00-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/photojm/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/photojm/ironwoman/</loc>
   </url><url>
     <loc>http://localhost:1313/photojm/lisbonne/</loc>
   </url><url>
+    <loc>http://localhost:1313/photojm/</loc>
+  </url><url>
     <loc>http://localhost:1313/photojm/riga/</loc>
+  </url><url>
+    <loc>http://localhost:1313/photojm/tags/</loc>
   </url>
 </urlset>
