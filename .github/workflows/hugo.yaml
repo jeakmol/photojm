@@ -5,10 +5,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
   group: "pages"
@@ -21,8 +18,12 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     env:
-      HUGO_VERSION: 0.168.0
+      HUGO_VERSION: 0.169.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -42,7 +43,10 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
+            --gc \
+            --cleanDestinationDir \
             --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -50,6 +54,9 @@ jobs:
           path: ./public
 
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

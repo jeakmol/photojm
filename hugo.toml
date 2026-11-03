@@ -1,4 +1,58 @@
 baseURL = 'https://jeakmol.github.io/photojm/'
 locale = 'fr-fr'
-title = 'photojm'
+defaultContentLanguage = 'fr'
+title = 'photojm — Photographies'
+copyright = '© 2026 photojm'
 theme = 'gallery'
+enableRobotsTXT = true
+enableGitInfo = false
+timeout = '120s'
+
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Albums photographiques de photojm.'
+  defaultTheme = 'dark'
+  [params.author]
+    name = 'photojm'
+  [params.gallery]
+    boxSpacing = 8
+    targetRowHeight = 280
+    targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML']
+
+[imaging]
+  resampleFilter = 'CatmullRom'
+  [imaging.jpeg]
+    quality = 82
+  [imaging.webp]
+    quality = 82
+  [imaging.avif]
+    quality = 82
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = 'ImageDescription|Orientation|DateTimeOriginal'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = false
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^go$']
+    osEnv = ['^HUGO_']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['GET']
+    urls = ['^https://']
+
+[services]
+  [services.rss]
+    limit = 100

@@ -1,0 +1,21 @@
+# Hugo generated output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/.taste-skill/
+
+# Local and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Dependency caches
+node_modules/
+vendor/

@@ -1,0 +1,51 @@
+/* Site-specific overrides for the vendored Gallery theme. */
+
+:root {
+  --surface-1-dark: #11100f;
+  --surface-2-dark: #24211e;
+  --text-1-dark: #f5f1eb;
+  --text-2-dark: #b8aea3;
+  --border-dark: #514940;
+}
+
+body > header {
+  padding: 1rem 1.5rem;
+}
+
+body > header a {
+  letter-spacing: 0.01em;
+}
+
+hgroup {
+  gap: 1rem;
+}
+
+hgroup p {
+  max-width: 42rem;
+}
+
+section.galleries {
+  gap: 2.75rem 1.5rem;
+}
+
+.card img,
+.gallery-item img {
+  background: var(--surface-2);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--text-1);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
