@@ -1,5 +1,203 @@
 # photojm
 
+Galerie photo construite avec Hugo. Pour ajouter des photos ou modifier un album, il suffit de manipuler des dossiers et un petit fichier texte : aucune modification de HTML, CSS ou JavaScript n’est nécessaire.
+
+## Guide débutant : comprendre le fonctionnement
+
+- **Hugo** transforme les photos et les textes en pages web.
+- **Le dépôt** est le dossier du projet suivi par Git.
+- **Git** conserve un historique des modifications.
+- **GitHub** héberge cet historique et le partage en ligne.
+- **Une branche** permet de préparer une version sans modifier immédiatement le site publié.
+- **Un commit** enregistre un ensemble de modifications dans l’historique local.
+- **Push** envoie ces commits sur GitHub.
+- **GitHub Pages** publie le site lorsque les changements arrivent sur la branche `main`.
+
+Le dossier `content/` est l’espace de travail du photographe. Les dossiers `layouts/`, `assets/`, `themes/` et `.github/` concernent le développement du site : vous n’avez pas besoin de les modifier pour gérer vos albums.
+
+## Installer et ouvrir les outils
+
+Ce guide utilise Windows 10 ou 11 :
+
+1. Installez [GitHub Desktop](https://desktop.github.com/) pour gérer les versions avec des boutons.
+2. Installez un éditeur de texte, par exemple [Visual Studio Code](https://code.visualstudio.com/). N’utilisez pas Word ou Pages pour les fichiers du site.
+3. Ouvrez **PowerShell** depuis le menu Démarrer et installez Hugo Extended avec la commande ci-dessous, issue de [la documentation officielle Windows](https://gohugo.io/installation/windows/).
+4. Vérifiez avec `hugo version` : la ligne doit contenir `extended`. Le projet utilise Hugo 0.169.0 en production ; une autre version peut afficher des différences ou des avertissements.
+
+```powershell
+winget install -e --id Hugo.Hugo.Extended
+```
+
+Après l’installation, fermez puis rouvrez PowerShell et Visual Studio Code avant de saisir `hugo version`. Si `winget` n’est pas reconnu, consultez la méthode d’installation manuelle dans la documentation Windows ci-dessus.
+
+Pour récupérer le projet, ouvrez GitHub Desktop puis **File → Clone repository → URL**. Entrez `https://github.com/jeakmol/photojm.git`, choisissez un dossier local et cliquez sur **Clone**. Si le projet est déjà sur votre ordinateur, utilisez **File → Add local repository** pour sélectionner ce dossier, sans le cloner une seconde fois.
+
+Dans GitHub Desktop, **Repository → Open in Visual Studio Code** ouvre les fichiers. Dans Visual Studio Code, **Terminal → New Terminal** ouvre un terminal dans le dossier du projet ; choisissez PowerShell si plusieurs profils sont disponibles.
+
+Dans l’Explorateur de fichiers Windows, activez **Affichage → Afficher → Extensions de noms de fichiers** (Windows 11), ou cochez **Extensions de noms de fichiers** dans l’onglet Affichage (Windows 10). Cela évite de créer accidentellement `index.md.txt` au lieu de `index.md`.
+
+Avant de commencer, choisissez la branche de travail dans **Current Branch**. La refonte est sur `agent/photojm-gallery-refactor`. Cliquez sur **Fetch origin**, puis **Pull origin** si proposé, avant vos modifications. Si vos changements locaux empêchent la mise à jour, conservez-les et demandez de l’aide plutôt que de les supprimer.
+
+## Voir le site sur son ordinateur
+
+Dans le terminal ouvert à la racine du projet :
+
+```sh
+hugo server --buildDrafts --buildFuture
+```
+
+Ouvrez [http://localhost:1313/photojm/](http://localhost:1313/photojm/) dans le navigateur. Gardez le terminal ouvert : Hugo met la page à jour lorsque vous enregistrez les fichiers. Ce serveur est une prévisualisation locale ; il ne publie rien.
+
+Pour arrêter : cliquez dans le terminal et appuyez sur **Ctrl+C**. Si le port 1313 est déjà utilisé, fermez l’ancien serveur ou lancez `hugo server --port 1314 --buildDrafts --buildFuture`, puis ouvrez l’adresse affichée par Hugo.
+
+Pour entrer manuellement dans le projet avec PowerShell, adaptez cet exemple au dossier choisi lors du clonage :
+
+```sh
+cd "C:\Users\VotreNom\Documents\GitHub\photojm"
+```
+
+Les guillemets permettent d’utiliser un chemin contenant des espaces. Le dossier courant doit contenir `hugo.toml`. Vous pouvez aussi ouvrir directement le dossier dans Visual Studio Code et utiliser son terminal intégré.
+
+## Ajouter un album, pas à pas
+
+### 1. Préparer les photos
+
+Exportez des copies JPEG depuis votre logiciel photo. Gardez vos RAW et vos fichiers maîtres dans votre photothèque. Une largeur de l’ordre de 2 000 à 3 000 pixels est suffisante pour commencer ; vérifiez la netteté et le poids avant d’ajouter de gros volumes.
+
+Choisissez des noms simples, par exemple `001-plage.jpg`, `002-port.jpg`, `003-falaise.jpg`. Les numéros à trois chiffres garantissent l’ordre souhaité. Évitez les caractères spéciaux, les noms contenant des données personnelles et les renommages de photos déjà publiées : leurs liens directs peuvent changer.
+
+### 2. Créer le dossier
+
+Dans `content/`, créez un dossier, par exemple `bretagne-2026`. Copiez-y les JPEG et créez un fichier nommé exactement `index.md`.
+
+```text
+content/
+└── bretagne-2026/
+    ├── index.md
+    ├── 001-plage.jpg
+    ├── 002-port.jpg
+    └── 003-falaise.jpg
+```
+
+Le nom du dossier détermine l’adresse : ici `/photojm/bretagne-2026/`. Choisissez-le avec soin, puis conservez-le.
+
+### 3. Renseigner la fiche de l’album
+
+Copiez ce modèle dans `index.md` :
+
+```yaml
+---
+title: "Bretagne 2026"
+date: 2026-07-18
+description: "Une sélection de photographies de la côte bretonne."
+cover: "001-plage.jpg"
+draft: true
+---
+```
+
+Remplacez les exemples par vos informations réelles. Les lignes `---` délimitent la fiche de l’album. Conservez-les. Le format s’appelle **YAML** : respectez les espaces et évitez les tabulations.
+
+| Champ | Rôle |
+| --- | --- |
+| `title` | Titre affiché, modifiable sans changer l’URL. |
+| `date` | Date de la série, au format année-mois-jour. Sans poids personnalisé, les albums sont classés du plus récent au plus ancien. |
+| `description` | Texte court présenté avec l’album. Vous pouvez retirer cette ligne. |
+| `cover` | Nom exact d’une photo du dossier, avec extension et majuscules identiques. Préférez une photo horizontale. |
+| `draft` | `true` conserve l’album en brouillon ; `false` le rend publiable. |
+
+Enregistrez le fichier (**Ctrl+S**). L’album apparaît automatiquement dans l’aperçu local, avec le compteur et la galerie. Il faut au moins une image pour qu’il apparaisse à l’accueil.
+
+Les deux petites photos d’aperçu sont sélectionnées automatiquement parmi les photos horizontales, hors couverture. S’il y en a moins de deux, le site en affiche seulement le nombre disponible. Il n’est pas nécessaire de créer des miniatures.
+
+### 4. Vérifier et rendre publiable
+
+Vérifiez l’accueil, la couverture, le nombre de photos et leur ordre. Cliquez sur une photo pour tester la visionneuse. Réduisez la largeur du navigateur pour examiner le rendu mobile.
+
+Lorsque tout est prêt, remplacez `draft: true` par `draft: false`. Attention : le serveur lancé avec `--buildDrafts --buildFuture` affiche aussi les brouillons et dates futures ; la publication normale les exclut. Pour contrôler la version réellement publiable, arrêtez-le puis lancez `hugo server`.
+
+## Modifier un album existant
+
+Ouvrez le dossier de l’album dans `content/`, puis son `index.md`.
+
+- **Modifier le titre ou la description** : changez le texte entre guillemets.
+- **Changer la couverture** : ajoutez ou modifiez `cover: "nom-exact.jpg"`. Ce champ est prioritaire sur l’ancien marquage `resources.params.cover`.
+- **Ajouter des photos** : copiez les nouveaux JPEG dans le même dossier ; le compteur se met à jour automatiquement.
+- **Retirer une photo** : déplacez-la hors du projet. Vérifiez qu’elle n’est pas la couverture et retirez sa fiche `resources` si elle en possède une. Cette action enlève aussi son accès après publication.
+- **Remplacer une photo** : utilisez le même nom si vous voulez conserver son identifiant. Vérifiez le résultat local avant publication.
+- **Changer l’ordre des photos** : elles suivent par défaut l’ordre alphabétique des noms. Pour une nouvelle série, utilisez `001-`, `002-`, etc. Pour une série déjà publiée, préférez les poids décrits ci-dessous afin de conserver les noms.
+- **Retirer tout un album du site publié** : mettez `draft: true`. Les photos restent dans le dépôt ; ce n’est pas une protection de confidentialité.
+
+Ne renommez pas le dossier d’un album existant : cela changerait son adresse publique. Modifier uniquement son `title` est sans risque pour l’URL.
+
+### Choisir l’ordre des albums
+
+Ajoutez `weight: 10` dans la fiche d’un album, `weight: 20` dans le suivant, etc. Les poids les plus petits passent avant les plus grands. Pour un classement explicite cohérent, attribuez un poids à chaque album.
+
+### Ajouter des descriptions de photos et un ordre personnalisé
+
+La section `resources` reste une fiche de contenu, pas du code de mise en page. Chaque `src` doit correspondre exactement à un fichier. S’il existe déjà une section `resources`, complétez-la au lieu d’en créer une seconde.
+
+```yaml
+---
+title: "Bretagne 2026"
+date: 2026-07-18
+description: "Photographies de la côte bretonne."
+cover: "001-plage.jpg"
+draft: false
+sort_by: "Params.weight"
+resources:
+  - src: "002-port.jpg"
+    title: "Bateaux dans le port au petit matin."
+    params:
+      weight: 10
+  - src: "001-plage.jpg"
+    title: "La plage à marée basse."
+    params:
+      weight: 20
+  - src: "003-falaise.jpg"
+    title: "La falaise vue depuis le sentier côtier."
+    params:
+      weight: 30
+---
+```
+
+Avec `sort_by: "Params.weight"`, donnez un poids à toutes les photos. Les titres servent de textes alternatifs et de légendes dans la visionneuse. Décrivez ce qui est réellement visible. Le site n’affiche pas les noms techniques comme légendes.
+
+## Enregistrer et publier avec GitHub Desktop
+
+1. Vérifiez le site local, puis revenez dans GitHub Desktop.
+2. Dans **Changes**, relisez les fichiers modifiés : pour une mise à jour d’album, vous devriez surtout voir les photos et `index.md`.
+3. Écrivez un résumé clair, par exemple « Ajoute l’album Bretagne 2026 », puis cliquez sur **Commit to…**. Le commit reste d’abord sur votre ordinateur.
+4. Cliquez sur **Push origin** pour envoyer votre branche sur GitHub.
+5. Si vous travaillez sur une branche autre que `main`, ouvrez une **Pull Request** vers `main` : c’est une demande d’intégration. Le push de la branche refactor ne met pas le site public à jour.
+6. Après validation et fusion dans `main`, ouvrez l’onglet **Actions** du dépôt GitHub et suivez **Deploy Hugo site to Pages**. Une coche verte indique la réussite du workflow.
+7. Consultez [le site public](https://jeakmol.github.io/photojm/). Si vous voyez l’ancienne version, actualisez sans cache (**Ctrl+F5**, ou **Ctrl+Shift+R** selon le navigateur).
+
+Un push direct sur `main` déclenche lui aussi la publication. Pour éviter une publication accidentelle, préparez les changements sur une branche dédiée.
+
+## Dépannage courant
+
+| Problème | À vérifier |
+| --- | --- |
+| Album absent | Dossier dans `content/`, fichier `index.md`, au moins un JPEG, `draft: false`, date non future pour la production. |
+| Fichier reconnu comme texte simple | Vérifiez que le nom est `index.md`, et non `index.md.txt`, en affichant les extensions dans l’Explorateur. |
+| `hugo` n’est pas reconnu | Rouvrez le terminal après l’installation ; vérifiez l’installation et le PATH avec la documentation officielle Windows. |
+| Couverture incorrecte | Nom exact, extension et majuscules ; `cover` doit se trouver entre les deux lignes `---`. |
+| Ordre inattendu | Noms de fichiers ou `sort_by`/poids ; la disposition masonry peut décaler les colonnes visuellement. |
+| Erreur YAML | Guillemets fermés, deux-points après le champ, indentation par espaces. |
+| Site local inaccessible | Terminal toujours ouvert, Hugo démarré, bonne adresse et bon port. |
+| Photos absentes sur GitHub | Commit et push des fichiers image effectués, pas seulement de `index.md`. |
+| Ancien design visible | Actualisation sans cache ; vérifiez aussi si vous consultez localhost ou le site public. |
+| `WARN deprecated` | Avertissement connu du thème ; si le build se termine et que le serveur démarre, il ne bloque pas l’aperçu. Une ligne `ERROR` demande en revanche une correction. |
+
+En cas d’erreur, copiez le message complet du terminal pour demander de l’aide. Ne supprimez pas les dossiers du projet au hasard.
+
+## Confidentialité et sauvegarde
+
+Les versions web sont générées automatiquement ; les ressources originales ne sont pas copiées sur GitHub Pages. **Les photos ajoutées au dépôt restent néanmoins visibles dans GitHub si le dépôt est public, et les fichiers supprimés peuvent rester dans l’historique Git.** N’y mettez donc aucune photographie confidentielle.
+
+Conservez une sauvegarde indépendante de votre photothèque. Ne modifiez jamais `public/` pour mettre le site à jour : ce dossier est recréé par Hugo.
+
 ## Choisir une couverture
 
 Chaque album peut définir directement une image dans son `index.md` :
@@ -59,7 +257,8 @@ La note initiale ci-dessous est conservée comme référence historique. Les dé
 - albums : grille masonry à deux, trois ou quatre colonnes, avec des images de tailles différentes et proportions intégralement conservées ;
 - couvertures choisies : Ironwoman 1, Lisbonne 4, Riga 15 ;
 - PhotoSwipe conservé : navigation, zoom, compteur, hash et téléchargement de la version web ;
-- palette claire et police système ; aucun CDN ni bibliothèque supplémentaire ;
+- fond principal blanc (#FFFFFF) et police système ; aucun CDN ni bibliothèque supplémentaire ;
+- palette neutre : texte anthracite (#20252A), texte secondaire gris (#606971), surfaces gris clair (#F1F3F5), accent bleu ardoise (#375E78) pour le focus et les liens survolés ;
 - ne pas publier les originaux, ne pas modifier les photographies ni les URL existantes.
 
 Les options ultérieures (mode sombre, filtres, carte et journal) restent hors périmètre.
