@@ -1,5 +1,7 @@
 # Instructions pour les agents
 
+Ce fichier est le point d’entrée unique des agents de développement. Objectif : maintenir une galerie photo Hugo rapide, accessible, éditoriale et sûre pour un photographe.
+
 ## Mission du dépôt
 
 `photojm` est un site Hugo destiné à présenter les photographies d’un photographe sous forme d’albums éditoriaux : voyages, villes, événements et séries personnelles.
