@@ -1,4 +1,57 @@
 /* Site-specific overrides for the vendored Gallery theme. */
+/* Shared palette, spacing, album previews and masonry gallery. */
+section.album-stories { max-width: 1596px; padding: 0 clamp(20px, 4vw, 48px); margin-top: 48px; }
+.album-story-image { display: block; overflow: hidden; background: var(--page-surface); }
+.album-story-image img { display: block; width: 100%; height: auto; transition: opacity 240ms; }
+.album-story-image:hover img { opacity: 0.92; }
+.album-story-copy h2 { font-size: clamp(28px, 3vw, 44px); font-weight: 400; line-height: 1.15; letter-spacing: -0.035em; margin-bottom: 20px; }
+.album-story-copy > p { color: var(--page-muted); font-size: 16px; line-height: 1.6; max-width: 32ch; margin-bottom: 12px; }
+.album-story-copy > p.photo-count { font-size: 13px; }
+.album-story-link { display: inline-flex; align-items: center; gap: 24px; min-height: 44px; margin-top: 20px; font-size: 15px; }
+.album-story-link span { transition: transform 200ms; }
+.album-story-link:hover span { transform: translate(3px, -3px); }
+/* Album previews read as small photographic essays, with equal weight per series. */
+section.album-stories {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: clamp(32px, 4vw, 56px);
+  row-gap: 56px;
+  align-items: start;
+  margin-top: 48px;
+  padding-bottom: 64px;
+}
+.album-story { display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr); gap: clamp(32px, 6vw, 96px); margin: 0 0 40px; min-width: 0; align-items: center; }
+.album-story:only-child { max-width: 900px; grid-column: 1 / -1; }
+.album-story-image { width: 100%; }
+.album-story-image img { aspect-ratio: 3 / 2; object-fit: cover; }
+.album-preview { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.album-preview .album-story-image { grid-column: 1 / -1; }
+.album-preview-detail img { display: block; width: 100%; height: auto; }
+.album-story:nth-child(even) .album-preview { grid-column: 1; }
+.album-story:nth-child(even) { grid-template-columns: minmax(0, 2fr) minmax(220px, 0.8fr); }
+.album-story-copy { grid-column: 1; grid-row: 1; }
+.album-story:nth-child(even) .album-story-copy { grid-column: 2; }
+.album-story-copy { width: 100%; }
+.album-story-copy h2 { font-size: clamp(24px, 2.5vw, 34px); margin: 0 0 12px; }
+.album-story-copy > p { max-width: 44ch; margin-bottom: 8px; }
+.album-story-link { margin-top: 8px; }
+@media (max-width: 767px) {
+  section.album-stories { grid-template-columns: minmax(0, 1fr); margin-top: 32px; row-gap: 48px; padding-bottom: 24px; }
+  .album-story { gap: 20px; }
+  .album-story, .album-story:nth-child(even) { grid-template-columns: minmax(0, 1fr); margin-bottom: 0; }
+  .album-story .album-preview, .album-story:nth-child(even) .album-preview { grid-column: 1; grid-row: 1; }
+  .album-story .album-story-copy, .album-story:nth-child(even) .album-story-copy { grid-column: 1; grid-row: 2; }
+}
+:root {
+  --page-bg: #f8f7f4;
+  --page-surface: #eae7e1;
+  --page-ink: #17191a;
+  --page-muted: #666a67;
+  --page-accent: #66776c;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px;
+  --space-4: 16px; --space-6: 24px; --space-8: 32px;
+  --space-12: 48px; --space-16: 64px; --space-24: 96px;
+}
 
 :root {
   --surface-1-dark: #11100f;
@@ -37,6 +90,51 @@ a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--text-1);
   outline-offset: 4px;
+}
+
+html.light { --surface-1: var(--page-bg); --surface-2: var(--page-surface); --text-1: var(--page-ink); --text-2: var(--page-muted); }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; }
+body > header.site-header { max-width: 1596px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); min-height: 84px; }
+.site-header a { display: inline-flex; align-items: center; min-height: 44px; color: var(--page-ink); }
+.site-header nav { flex-shrink: 0; white-space: nowrap; }
+.site-name { font-size: 21px; font-weight: 500; }
+.site-brand { display: flex; align-items: center; gap: 24px; min-width: 0; }
+.site-name { margin: 0; flex-shrink: 0; }
+.site-tagline { margin: 0; color: var(--page-muted); font-size: 15px; line-height: 1.5; }
+main > section.galleries:first-child { margin-top: 48px; }
+@media (max-width: 767px) {
+  .site-brand { flex-direction: column; align-items: flex-start; gap: 4px; }
+  body > header.site-header { padding-top: 16px; padding-bottom: 16px; gap: 16px; }
+  .site-tagline { font-size: 14px; }
+  main > section.galleries:first-child { margin-top: 32px; }
+}
+main > hgroup { width: 100%; max-width: 1596px; margin: 48px auto 64px; padding: 0 clamp(20px, 4vw, 48px); align-items: flex-start; text-align: left; gap: 16px; }
+hgroup h1 { font-weight: 400; letter-spacing: -0.035em; font-size: clamp(36px, 4vw, 48px); line-height: 1.1; }
+hgroup.home-intro h1 { font-size: clamp(40px, 4.5vw, 56px); }
+hgroup p { font-size: 16px; line-height: 1.6; }
+.photo-count { font-size: 13px; color: var(--page-muted); }
+section.galleries { max-width: 1596px; padding: 0 clamp(20px, 4vw, 48px); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 32px; }
+.card, .card > figure, .card figure > img { border-radius: 0; box-shadow: none; }
+.card figure > img:hover { box-shadow: none; }
+.card figure > img { transition: opacity 220ms; }
+.card:hover figure > img { opacity: 0.92; }
+.card > div { padding: 20px 0 0; gap: 8px; }
+.card > div > h2 { font-size: 20px; font-weight: 500; }
+.card > div > p { font-size: 15px; line-height: 1.6; }
+.card > div > p.photo-count { font-size: 13px; }
+section.gallery { max-width: 1596px; padding: 0 clamp(20px, 4vw, 48px); }
+#gallery { --gallery-gap: 20px; position: relative; }
+.gallery-item { display: block; }
+.gallery-item figure, .gallery-item img { width: 100%; height: auto; }
+.gallery-item img { display: block; object-fit: contain; }
+.pswp-caption-content { display: none; }
+.pswp { color: #fff; }
+.pswp__button:focus-visible { outline-color: #fff; outline-offset: -4px; }
+@media (max-width: 767px) {
+  body > header.site-header { min-height: 76px; }
+  main > hgroup { margin-top: 32px; margin-bottom: 40px; }
+  section.galleries { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  #gallery { --gallery-gap: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

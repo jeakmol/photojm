@@ -1,4 +1,8 @@
-<meta name="theme-color" content="#11100f" />
+<meta name="theme-color" content="#F8F7F4" />
+<style>
+  #gallery { --gallery-gap: {{ site.Params.gallery.boxSpacing }}px; }
+  @media (max-width: 767px) { #gallery { --gallery-gap: {{ site.Params.gallery.mobileSpacing }}px; } }
+</style>
 <meta
   http-equiv="Content-Security-Policy"
   content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"

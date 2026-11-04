@@ -1,0 +1,28 @@
+{{ $page := .page }}
+{{ $gallery := partial "get-gallery.html" $page }}
+{{ with $gallery }}
+<a class="album-story" href="{{ $page.RelPermalink }}">
+  <div class="album-preview">
+    <div class="album-story-image">
+    {{ partial "responsive-image.html" (dict "source" (index .images 0) "alt" $page.Title "eager" (eq $.index 0) "cover" true "page" $page "editorial" true) }}
+    </div>
+    {{ $cover := partial "album-cover.html" $page }}
+    {{ $extras := slice }}
+    {{ range .images }}
+      {{ $oriented := .Filter images.AutoOrient }}
+      {{ if and (ne .Name $cover.Name) (gt $oriented.Width $oriented.Height) }}
+        {{ $extras = $extras | append . }}
+      {{ end }}
+    {{ end }}
+    {{ range first 2 $extras }}
+      <div class="album-preview-detail">{{ partial "responsive-image.html" (dict "source" . "alt" "" "eager" false) }}</div>
+    {{ end }}
+  </div>
+  <div class="album-story-copy">
+    <h2>{{ $page.Title }}</h2>
+    {{ if site.Params.showDescriptions }}{{ with $page.Description }}<p>{{ . }}</p>{{ end }}{{ end }}
+    {{ if site.Params.showCounts }}<p class="photo-count">{{ .imageCount }} photographies</p>{{ end }}
+    <span class="album-story-link">Découvrir la série <span aria-hidden="true">↗</span></span>
+  </div>
+</a>
+{{ end }}

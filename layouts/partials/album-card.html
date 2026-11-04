@@ -1,0 +1,13 @@
+{{ $page := .page }}
+{{ $gallery := partial "get-gallery.html" $page }}
+{{ with $gallery }}
+<a class="card" href="{{ $page.RelPermalink }}">
+  <figure>
+    {{ partial "responsive-image.html" (dict "image" .thumbnail "source" (index .images 0) "alt" $page.Title "eager" (eq $.index 0) "cover" true "page" $page) }}
+  </figure>
+  <div><h2>{{ $page.Title }}</h2>
+    {{ if site.Params.showDescriptions }}{{ with $page.Description }}<p>{{ . }}</p>{{ end }}{{ end }}
+    {{ if site.Params.showCounts }}<p class="photo-count">{{ .imageCount }} photographies</p>{{ end }}
+  </div>
+</a>
+{{ end }}

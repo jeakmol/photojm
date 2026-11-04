@@ -1,0 +1,15 @@
+{{/* Explicit choice wins; otherwise prefer the first landscape after EXIF orientation. */}}
+{{ $images := .Resources.ByType "image" }}
+{{ $cover := "" }}
+{{ with .Params.cover }}{{ $cover = $images.GetMatch . }}{{ end }}
+{{ if not $cover }}
+  {{ with where $images "Params.cover" "eq" true }}{{ $cover = index . 0 }}{{ end }}
+{{ end }}
+{{ if not $cover }}
+  {{ range where $images "Params.hidden" "ne" true }}
+    {{ $oriented := .Filter images.AutoOrient }}
+    {{ if and (not $cover) (gt $oriented.Width $oriented.Height) }}{{ $cover = . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $cover }}{{ with $images }}{{ $cover = index . 0 }}{{ end }}{{ end }}
+{{ return $cover }}

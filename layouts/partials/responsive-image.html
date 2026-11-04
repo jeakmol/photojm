@@ -1,0 +1,13 @@
+{{ $image := .source }}
+{{ if .cover }}
+  {{ $image = partial "album-cover.html" .page }}
+{{ end }}
+{{ $image = $image.Filter images.AutoOrient }}
+{{ $small := $image.Resize "480x" }}
+{{ $medium := $image.Resize "800x" }}
+{{ $large := $image.Resize "1200x" }}
+{{ if .editorial }}
+<img src="{{ $large.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1596px) 90vw, 1500px" width="{{ $large.Width }}" height="{{ $large.Height }}" alt="{{ .alt }}" loading="{{ if .eager }}eager{{ else }}lazy{{ end }}" {{ if .eager }}fetchpriority="high"{{ end }} decoding="async">
+{{ else }}
+<img src="{{ $medium.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w" sizes="{{ if .cover }}(max-width: 767px) calc(100vw - 40px), (max-width: 1550px) calc(50vw - 72px), 726px{{ else }}(max-width: 767px) 100vw, 600px{{ end }}" width="{{ $medium.Width }}" height="{{ $medium.Height }}" alt="{{ .alt }}" loading="{{ if .eager }}eager{{ else }}lazy{{ end }}" {{ if .eager }}fetchpriority="high"{{ end }} decoding="async">
+{{ end }}

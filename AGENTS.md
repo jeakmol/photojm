@@ -6,7 +6,7 @@
 
 La priorité est l’image : navigation évidente, grandes photos nettes, chargement raisonnable, légendes accessibles et interface discrète. Le site n’est pas un blog générique ni une démonstration de composants.
 
-La direction visuelle retenue pour les évolutions est **contact-sheet** : une planche de contacts éditoriale, dense mais calme, où la quantité et la cohérence des séries font la force de la page. Elle doit rester au service des photographies existantes, sans images d’ambiance inventées.
+Le README contient la note de design initiale et les évolutions validées, qui font référence : accueil présentant plusieurs aperçus par album et galerie masonry à tailles variées, avec proportions conservées. Ces demandes remplacent la grille d’accueil initiale et le mode justifié.
 
 ## Stack et choix techniques
 
@@ -46,7 +46,7 @@ La configuration racine désactive la publication des ressources originales. Ne 
 ## Direction visuelle
 
 - approche éditoriale, calme et image-first ;
-- fond sombre neutre, texte lisible, contraste élevé ;
+- fond clair neutre, texte lisible, contraste élevé ;
 - pas de gradients, de badges décoratifs, de cartes génériques, de dépendances CDN ou de widgets inutiles ;
 - une galerie doit rester agréable au clavier, au tactile et sans JavaScript essentiel ;
 - les animations doivent être sobres et respecter `prefers-reduced-motion` ;

@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <section class="album-stories" aria-label="Albums photographiques">
+    {{ range $i, $page := where .Pages "Params.private" "ne" true }}
+      {{ partial "album-story.html" (dict "page" $page "index" $i) }}
+    {{ end }}
+  </section>
+{{ end }}

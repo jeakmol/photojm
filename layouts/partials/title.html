@@ -1,0 +1,7 @@
+<hgroup class="{{ if .IsHome }}home-intro{{ else }}album-intro{{ end }}">
+  <h1>{{ .Title }}</h1>
+  {{ if and site.Params.showDescriptions (or (not .IsHome) site.Params.showIntro) }}
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  {{ end }}
+  {{ if and (not .IsHome) site.Params.showCounts }}<p class="photo-count">{{ len (where (.Resources.ByType "image") "Params.hidden" "ne" true) }} photographies</p>{{ end }}
+</hgroup>

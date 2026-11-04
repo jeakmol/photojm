@@ -12,13 +12,18 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   description = 'Albums photographiques de photojm.'
-  defaultTheme = 'dark'
+  defaultTheme = 'light'
+  showDescriptions = true
+  showCounts = true
+  showIntro = true
+  enableDownload = true
+  enableAnimations = true
   [params.author]
     name = 'photojm'
   [params.gallery]
-    boxSpacing = 8
-    targetRowHeight = 280
-    targetRowHeightTolerance = 0.25
+    boxSpacing = 20
+    mobileSpacing = 10
+    showCaptions = false
 
 [outputs]
   home = ['HTML', 'RSS']
