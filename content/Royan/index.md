@@ -1,5 +1,6 @@
 ---
 title: 'Royan 2026'
+weight: 2389
 date: 2019-07-12
 description: 'Royan, les reconstructions des années 1950-1960.'
 resources:

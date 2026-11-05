@@ -1,5 +1,6 @@
 ---
 title: 'Riga 2019'
+weight: 3093
 date: 2019-07-12
 description: 'Riga, une série réalisée en juillet 2019.'
 resources:
