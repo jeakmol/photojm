@@ -3,10 +3,10 @@ ajout de l'album Royan dans  .....photojm/content/
 
 powershell
 ps>  	cd photojm
-ps> 	hugo server    (arret avec ctrl + c)
+ 	hugo server    (arret avec ctrl + c)
 
 ps> 	git add .
-ps> 	git commit -m "album Royan"
+	git commit -m "album Royan"
     	git branch -M main
 
 	git remote add origin https://github.com/jeakmol/photojm.git
