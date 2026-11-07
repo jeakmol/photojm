@@ -2,7 +2,7 @@
  "compilerOptions": {
   "paths": {
    "*": [
-    "../themes/gallery/assets/*"
+    "..\\themes\\gallery\\assets\\*"
    ]
   }
  }
